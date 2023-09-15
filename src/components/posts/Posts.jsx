@@ -4,23 +4,24 @@ import './posts.scss';
 import axios from 'axios';
 
 
-function Posts({userId}) {
+function Posts({userId,noPost}) {
     const [posts, setPosts] = useState([]);
-
+    const [noPostMsg, setNoPostMsg]=useState("No posts to show.");
     useEffect(()=>{
       const userPosts = async()=>{
         try {
+          let res;
           if(userId){
-            const res = await axios.get("https://react-social-api.onrender.com/api/posts?userId="+userId.id,{
-            withCredentials: !havePosts
-          });
-          setPosts(res.data);
-          }else{
-            const res = await axios.get("https://react-social-api.onrender.com/api/posts/",{
+            res = await axios.get("https://react-social-api.onrender.com/api/posts?userId="+userId.id,{
             withCredentials: true
           });
-          setPosts(res.data);
+          }else{
+            res = await axios.get("https://react-social-api.onrender.com/api/posts/",{
+            withCredentials: true
+          });
+
           }
+          setPosts(res.data);
         } catch (error) {
           console.log(error);
         }
@@ -29,7 +30,7 @@ function Posts({userId}) {
     },[]);
   return (
     <div className='posts'>
-      {posts.length>0 ? <h1>No posts to show.</h1> :
+      {noPost ? <h1>{noPostMsg}</h1> :
         posts.map(post=>(
           <Post post={post} key={post.id} userId = {userId} />
         ))
