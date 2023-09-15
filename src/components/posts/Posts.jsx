@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function Posts({userId}) {
     const [posts, setPosts] = useState([]);
-    const [havePosts, setHavePosts] = useState(true);
+    const [havePosts, setHavePosts] = useState(null);
     useEffect(()=>{
       const userPosts = async()=>{
         try {
@@ -28,7 +28,7 @@ function Posts({userId}) {
         }
       }
       userPosts();
-    },[]);
+    },[havePosts]);
   return (
     <div className='posts'>
       {havePosts ? <h1>No posts to show.</h1> :
