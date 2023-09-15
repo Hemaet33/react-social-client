@@ -123,10 +123,7 @@ function Profile() {
           </div>
         </div>
         
-        {userPost?
           <Posts userId={userId} />
-        : <Posts userId={userId} noPost = "No posts to show"/>
-        }
       </div>
       
     {updateOpen && <Update setUpdateOpen={setUpdateOpen} user={user} key={user.id} />}
