@@ -6,6 +6,7 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import PersonRemoveOutlinedIcon from '@mui/icons-material/PersonRemoveOutlined';
 
 import './navbar.scss';
 import { Link, useNavigate } from 'react-router-dom';
@@ -57,7 +58,7 @@ function Navbar() {
           <button type="submit" style={{display:"none"}}></button>
         </form>
           <button className="logout" onClick={handleLogout}>Logout</button>
-          <button className="deleteUser" onClick={deleteUser}>Logout</button>
+          <PersonRemoveOutlinedIcon className="deleteUser" onClick={deleteUser} />
       </div>
 
       <div className="right"> 
