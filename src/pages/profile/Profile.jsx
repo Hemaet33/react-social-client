@@ -81,7 +81,7 @@ function Profile() {
     <div className='profile'>
       <div className="images">
         <img src={user.coverPic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809710/noCover_nmxegz.png"} alt="" className="cover" />
-        <img src={user.profilePic || PF + "noAvatar.png"} alt="" className="profilePic" />
+        <img src={user.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" className="profilePic" />
       </div>
       <div className="profileContainer">
         <div className="uInfo">
