@@ -48,8 +48,8 @@ function Login() {
         <div className="right">
           <h1>Login</h1>
           <form onSubmit={handleLogin}>
-          <input type="text"  placeholder='Username' name="username" onChange={handleChange}/>
-          <input type="password"  placeholder='Password'  name="password" onChange={handleChange} />
+          <input type="text"  value={inputs.username} placeholder='Username' name="username" onChange={handleChange}/>
+          <input type="password"  value={inputs.password} placeholder='Password'  name="password" onChange={handleChange} />
           {err && err}
           {navigation.state == "loading" ? <button type='submit'>"Loading"</button> : <button type='submit'>Login</button>}
           

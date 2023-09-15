@@ -50,10 +50,10 @@ function Register() {
         <div className="right">
           <h1>Register</h1>
           <form onSubmit={handleSubmit}>
-          <input type="text"  placeholder='Username' name="username" onChange={handleChange} />
-          <input type="email"  placeholder='Email' name="email" onChange={handleChange}  />
-          <input type="password"  placeholder='Password' name="password" onChange={handleChange}  />
-          <input type="text"  placeholder='Name' name="name" onChange={handleChange}  />
+          <input type="text" value={inputs.username} placeholder='Username' name="username" onChange={handleChange} />
+          <input type="email"  value={inputs.email} placeholder='Email' name="email" onChange={handleChange}  />
+          <input type="password"  value={inputs.password}  placeholder='Password' name="password" onChange={handleChange}  />
+          <input type="text"   value={inputs.name} placeholder='Name' name="name" onChange={handleChange}  />
           <span>{err && err}</span>
           <button type='submit'>Register</button>
           </form>
