@@ -1,9 +1,10 @@
 import { useContext, useState } from 'react';
 import './login.scss';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link, useNavigate, useNavigation} from 'react-router-dom';
 import { AuthContext } from '../../contexts/authContext';
 
 function Login() {
+  const navigation = useNavigation();
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({
     username:"",
@@ -46,7 +47,8 @@ function Login() {
           <input type="text"  placeholder='Username' name="username" onChange={handleChange}/>
           <input type="password"  placeholder='Password'  name="password" onChange={handleChange} />
           {err && err}
-          <button type='submit'>Login</button>
+          {navigation.state == "loading" ? <button type='submit'>"Loading"</button> : <button type='submit'>Login</button>}
+          
           </form>
         </div>
       </div>
