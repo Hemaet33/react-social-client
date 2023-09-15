@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 
 function Leftbar() {
   const {currentUser} = useContext(AuthContext);
-  const PF = "../../../public/images/";
+  const PF = "/react-social-client/public/images/";
   return (
     <div className='leftbar'>
       <div className="container">
