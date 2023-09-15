@@ -1,0 +1,116 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    -webkit-box-shadow: 0 2px 3px rgba(214, 212, 212,0.85);
+    -moz-box-shadow: 0 2px 3px rgba(214, 212, 212,0.85);
+    box-shadow: 0 2px 3px rgba(214, 212, 212,0.85);
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color:themed("textColor");
+    z-index: 999;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex: 3;
+
+      span {
+        font-weight: bold;
+        font-size: 20px;
+        color: themed("logo");
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("bgSoft");
+        background-color: themed("bgSoft");
+        border-radius: 20px;
+        padding: 1px 5px;
+        height: 34px;
+
+       input{
+        &:focus{
+          outline: none;
+        }
+       }
+
+        input {
+          border: none;
+          width: 500px;
+          background-color: transparent;
+          color: themed("textColor");
+
+          @include mobile{
+            display: none;
+          }
+
+          @include tablet{
+            width: 200px;
+          }
+        }
+      }
+      
+      .logout{
+        width: 70px;
+        height: 34px;
+        border:none;
+        background-color: #ebeaea;
+        box-shadow: 0 1px 2px #c7c6c6;
+        justify-self: flex-end;
+        cursor: pointer;
+
+        &:hover{
+          box-shadow: none;
+        }
+      }
+
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+
+      @include mobile{
+        display: none;
+      }
+
+    a{
+      text-decoration: none;
+      color:themed("textColor");
+      
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+
+        @include tablet{
+          display: none;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+        }
+      }
+    }
+    }
+  }
+}

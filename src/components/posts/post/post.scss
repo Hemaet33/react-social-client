@@ -1,0 +1,93 @@
+@import '../../../style.scss';
+
+.post{
+  @include themify($themes){
+    -webkit-box-shadow: 0 1px 3px #d6d4d4;
+    -moz-box-shadow: 0 1px 3px #d6d4d4;
+    box-shadow: 0 1px 3px #d6d4d4;
+    border-radius: 10px;
+    background-color: themed("bg");
+    color: themed("textColor");
+    width: 100%;
+
+
+
+    .user{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+      
+
+      .userInfo{
+        display: flex;
+        gap: 20px;
+        img{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .details{
+          display: flex;
+          flex-direction: column;
+          .name{
+            font-weight: 500;
+            cursor: pointer;
+          }
+          .date{
+            font-size: 12px;
+          }
+        }
+      }
+      .delPost{
+        font-size: 20px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+
+        &:hover{
+          background-color: #ddd;
+        }
+      }
+    }
+
+    .content{
+      margin: 20px 0;
+
+      p{
+        padding: 0 15px;
+      }
+      
+
+      img{
+        width: 100%;
+        margin-top: 20px;
+        object-fit: cover;
+        max-height: 500px;
+      }
+    }
+
+    .info{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 15px 10px;
+      
+
+      .item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    }
+}
+}

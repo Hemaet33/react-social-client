@@ -1,0 +1,62 @@
+@import '../../style.scss';
+
+.searcher{
+  @include themify($themes){
+    background-color: themed("bgSoft");
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    min-height: 100vh;
+
+    h1{
+      color: #b3b2b2;
+      text-align: center;
+    }
+
+    .result{
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0 auto;
+      background-color: themed("bg");
+      padding: 20px;
+      -webkit-box-shadow: 0 1px 3px #d6d4d4;
+      -moz-box-shadow: 0 1px 3px #d6d4d4;
+      box-shadow: 0 1px 3px #d6d4d4;
+      border-radius: 10px;
+
+      a{
+        text-decoration: none;
+        .user_identitty{
+          display: flex;
+          gap: 20px;
+          img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          h2{
+            font-size: 25px;
+            font-weight: 500;
+            color: themed("textColor");
+          }
+        }
+      }
+      .user_desc{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        li{
+          padding: 5px;
+          font-weight: 500;
+          font-size: 18px;
+          color: #b3b2b2;
+        }
+      }
+    }
+  }
+}

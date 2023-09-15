@@ -1,0 +1,22 @@
+@import '../../style.scss';
+
+.home{
+  @include themify($themes){
+    background-color: themed("bgSoft");
+    padding: 20px 0;
+    min-height: 100vh;
+
+    .container{
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+  @include mobile{
+    padding: 10px;
+  }
+
+  @include tablet{
+    padding: 20px;
+  }
+}
