@@ -33,6 +33,13 @@ function Navbar() {
     await localStorage.removeItem("user");
     navigate("/login");
   }
+  
+  const deleteUser = async()=>{
+    await axios.delete("https://react-social-api.onrender.com/api/users");
+    await axios.post("https://react-social-api.onrender.com/api/auth/logout");
+    await localStorage.removeItem("user");
+    navigate("/login");
+  }
 
 
   return (
@@ -50,6 +57,7 @@ function Navbar() {
           <button type="submit" style={{display:"none"}}></button>
         </form>
           <button className="logout" onClick={handleLogout}>Logout</button>
+          <button className="deleteUser" onClick={deleteUser}>Logout</button>
       </div>
 
       <div className="right"> 

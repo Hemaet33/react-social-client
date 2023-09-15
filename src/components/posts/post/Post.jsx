@@ -81,7 +81,7 @@ function Post({post,setDeletedPost}) {
             <span className="date">{moment(post.createdAt).fromNow()}</span>
         </div>
         </div>
-        {currentUser.id == post.userId && <span className="delPost" onClick={deletePost}>x</span>}
+        {currentUser.id == post.userId && <span className="delPost" onClick={deletePost} title="Delete post">x</span>}
       </div>
 
       <div className="content">
