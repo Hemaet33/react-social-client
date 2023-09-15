@@ -1,7 +1,7 @@
 import Login from "./pages/login/Login.jsx";
 import './app.scss';
 import Register from './pages/register/Register.jsx';
-import {createBrowserRouter, RouterProvider, Route, Outlet, Navigate} from 'react-router-dom';
+import {createBrowserRouter, RouterProvider, Route, Outlet, Navigate, createHashRouter} from 'react-router-dom';
 import Navbar from './components/navbar/Navbar.jsx';
 import Leftbar from './components/leftbar/Leftbar.jsx';
 import Rightbar from './components/rightbar/Rightbar.jsx';
@@ -42,7 +42,7 @@ function App() {
     }
     return children;
   }
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <ProtectedRoute><Layout /></ProtectedRoute>,
