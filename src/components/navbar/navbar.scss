@@ -78,9 +78,7 @@
         cursor: pointer;
 
         &:hover{
-          -webkit-box-shadow: 0 2px 3px rgba(252, 195, 195, 0.85);
-    -moz-box-shadow: 0 2px 3px rgba(252, 195, 195, 0.85);
-    box-shadow: 0 2px 3px rgba(252, 195, 195, 0.85);
+          color: rgba(252, 195, 195, 0.85);
         }
       }
 
