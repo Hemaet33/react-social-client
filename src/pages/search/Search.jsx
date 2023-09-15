@@ -7,8 +7,6 @@ function Search() {
   const name = useParams();
   const [results, setResults]=useState([]);
 
-  const PF = "../../../public/images/";
-
   useEffect(()=>{
     const fetchUser = async()=>{
       const res = await axios.get(`https://react-social-api.onrender.com/api/users/search/${name.name}`,{
@@ -27,7 +25,7 @@ function Search() {
       <div className="result" key={user.id}>
        <Link to={`/profile/${user.id}`}>
        <div className="user_identitty">
-        <img src={user.profilePic || PF+"noAvatar.png"} alt="" />
+        <img src={user.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
         <h2>{user.name}</h2>
         </div>
        </Link>

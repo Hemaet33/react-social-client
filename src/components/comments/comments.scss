@@ -62,6 +62,22 @@
         color: grey;
         font-size: 12px;
       }
+
+      .delete{
+        font-size: 20px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+
+        &:hover{
+          background-color: #ddd;
+        }
+      }
     }
   }
 }

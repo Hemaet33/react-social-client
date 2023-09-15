@@ -45,6 +45,7 @@ const Comments = ({postId,setCommentsCount}) => {
             <p>{comment.desc}</p>
           </div>
           <span className="date">1 hour ago</span>
+          <span className="delete" title="Delete">x</span>
         </div>
       ))}
     </div>
