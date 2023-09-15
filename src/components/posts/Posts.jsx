@@ -28,7 +28,7 @@ function Posts({userId}) {
         }
       }
       userPosts();
-    },[havePosts]);
+    },[]);
   return (
     <div className='posts'>
       {havePosts ? <h1>No posts to show.</h1> :
