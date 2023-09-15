@@ -23,7 +23,6 @@ function Profile() {
   const [followers, setFollowers] = useState([]);
   const [followed, setFollowed] = useState(false);
   const [updateOpen, setUpdateOpen] = useState(false);
-  const PF = "../../../public/images/";
 
 
   useEffect(()=>{

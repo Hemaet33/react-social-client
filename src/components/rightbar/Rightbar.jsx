@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import "./rightbar.scss";
 import axios from 'axios';
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Rightbar = () => {
-  const userId = useParams();
-  const PF = "../../../public/images/";
   const [suggestions, setSuggestions] = useState([]);
   const [friends, setFriends] = useState([]);
   const [followed, setFollowed] = useState(false);
@@ -50,7 +48,7 @@ const Rightbar = () => {
             <Link to={`/profile/${user.id}`}>
             <div className="userInfo">
               <img
-                src={user.profilePic || PF+"noAvatar.png"}
+                src={user.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"}
                 alt=""
               />
               <span>{user.name}</span>
@@ -123,7 +121,7 @@ const Rightbar = () => {
             <div className="user">
             <div className="userInfo">
               <img
-                src={friend.profilePic || PF+"noAvatar.png"}
+                src={friend.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"}
                 alt=""
               />
               <div className="online" />

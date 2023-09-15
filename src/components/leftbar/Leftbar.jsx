@@ -18,14 +18,13 @@ import { Link } from 'react-router-dom';
 
 function Leftbar() {
   const {currentUser} = useContext(AuthContext);
-  const PF = "/react-social-client/public/images/";
   return (
     <div className='leftbar'>
       <div className="container">
         <div className="menu">
           <Link to={`/profile/${currentUser.id}`}>
           <div className="user">
-            <img src={currentUser.profilePic || PF+"noAvatar.png"} alt="" />
+            <img src={currentUser.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
             <span>{currentUser.name}</span>
           </div>
           </Link>

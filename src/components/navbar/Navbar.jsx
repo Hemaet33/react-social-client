@@ -19,7 +19,6 @@ function Navbar() {
   const {currentUser} = useContext(AuthContext);
   const {toggle, darkMode} = useContext(DarkModeContext);
   const [search, setSearch]=useState("");
-  const PF = "../../../public/images/";
 
 
   const handleSubmit = async(e)=>{
@@ -61,7 +60,7 @@ function Navbar() {
         <NotificationsOutlinedIcon />
         <Link to={`/profile/${currentUser.id}`}>
         <div className="user">
-          <img src={currentUser.profilePic || PF + "noAvatar.png"} alt="" />
+          <img src={currentUser.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
           <span>{currentUser.name}</span>
         </div>
         </Link>

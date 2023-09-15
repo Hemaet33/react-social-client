@@ -67,15 +67,13 @@ function Post({post}) {
 
 
 
-  const PF = "../../../../public/images/";
-
   return (
     <>
     <div className='post'>
     
       <div className="user">
         <div className="userInfo">
-        <img src={post.profilePic || PF + "noAvatar.png"} alt="" />
+        <img src={post.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
         <div className="details">
           <Link to={`/profile/${post.userId}`} style={{textDecoration:"none", color:"inherit"}}>
             <span className="name">{post.name}</span>
