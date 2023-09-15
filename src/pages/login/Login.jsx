@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import './login.scss';
 import {Link, useNavigate} from 'react-router-dom';
-import { AuthContext } from '../../contexts/authContext';
+import { AuthContext } from '../../contexts/AuthContext';
 
 function Login() {
   const navigate = useNavigate();

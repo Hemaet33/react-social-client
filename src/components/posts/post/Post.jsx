@@ -9,7 +9,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import moment from 'moment';
 import axios from "axios";
-import { AuthContext } from "../../../contexts/authContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 import Posts from "../Posts";
 
 

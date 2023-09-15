@@ -9,8 +9,8 @@ import Home from './pages/home/Home.jsx';
 import Profile from './pages/profile/Profile.jsx';
 import './style.scss';
 import { useContext } from 'react';
-import { DarkModeContext } from './contexts/darkModeContext.jsx';
-import { AuthContext } from './contexts/authContext.jsx';
+import { DarkModeContext } from './contexts/DarkModeContext.jsx';
+import { AuthContext } from './contexts/AuthContext.jsx';
 import Search from './pages/search/Search.jsx';
 
 

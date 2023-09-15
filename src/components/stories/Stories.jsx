@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
-import {AuthContext} from '../../contexts/authContext';
+import {AuthContext} from '../../contexts/AuthContext';
 import './stories.scss';
 import StoryModal from './StoryModal';
 import axios from 'axios';

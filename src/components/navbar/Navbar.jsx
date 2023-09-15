@@ -10,8 +10,8 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import './navbar.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import { DarkModeContext } from '../../contexts/darkModeContext';
-import { AuthContext } from '../../contexts/authContext';
+import { DarkModeContext } from '../../contexts/DarkModeContext';
+import { AuthContext } from '../../contexts/AuthContext';
 import axios from 'axios';
 
 function Navbar() {

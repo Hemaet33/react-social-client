@@ -12,7 +12,7 @@ import Posts from '../../components/posts/Posts';
 import { useParams } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import { AuthContext } from '../../contexts/authContext';
+import { AuthContext } from '../../contexts/AuthContext';
 import Update from '../../components/update/Update';
 
 function Profile() {
