@@ -18,7 +18,6 @@ const Comments = ({postId,setCommentsCount}) => {
     setComment("");
   }
   const deleteComment = async(id)=>{
-    e.preventDefault();
     await axios.delete("https://react-social-api.onrender.com/api/comments/"+id,{
       withCredentials: true
     });
