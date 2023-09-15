@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import "./comments.scss";
-import { AuthContext } from "../../contexts/AuthContext";
+import { AuthContext } from "../../contexts/authContext";
 import axios from "axios";
 
 const Comments = ({postId,setCommentsCount}) => {

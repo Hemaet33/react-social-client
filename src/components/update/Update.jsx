@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import './update.scss';
 import axios from 'axios';
-import { AuthContext } from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/authContext';
 
 function Update({setUpdateOpen, user}) {
   const {fetchContextUser}=useContext(AuthContext)
