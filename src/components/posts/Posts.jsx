@@ -4,22 +4,25 @@ import './posts.scss';
 import axios from 'axios';
 
 
-function Posts({userId,noPost}) {
+function Posts({userId}) {
     const [posts, setPosts] = useState([]);
+    const [havePosts, setHavePosts] = useState(true);
     useEffect(()=>{
       const userPosts = async()=>{
         try {
-          let res;
           if(userId){
-            res = await axios.get("https://react-social-api.onrender.com/api/posts?userId="+userId.id,{
+            const res = await axios.get("https://react-social-api.onrender.com/api/posts?userId="+userId.id,{
             withCredentials: true
           });
+          await setPosts(res.data);
+          res.data.length>0 ? setHavePosts(true) : setHavePosts(false)
           }else{
-            res = await axios.get("https://react-social-api.onrender.com/api/posts/",{
+            const res = await axios.get("https://react-social-api.onrender.com/api/posts/",{
             withCredentials: true
           });
+          await setPosts(res.data);
+          res.data.length>0 ? setHavePosts(true) : setHavePosts(false)
           }
-          setPosts(res.data);
         } catch (error) {
           console.log(error);
         }
@@ -28,7 +31,7 @@ function Posts({userId,noPost}) {
     },[]);
   return (
     <div className='posts'>
-      {noPost ? <h1>{noPost}</h1> :
+      {havePosts ? <h1>No posts to show.</h1> :
         posts.map(post=>(
           <Post post={post} key={post.id} userId = {userId} />
         ))
