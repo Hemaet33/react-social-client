@@ -49,7 +49,7 @@ const Share = () => {
         <div className="top">
           <div className="left">
           <img
-            src={currentUser.profilePic || PF + "noAvatar.png"}
+            src={currentUser.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"}
             alt=""
           />
           <input type="text" value={desc} placeholder={`What's on your mind ${currentUser.name}?`} onChange={(e)=>SetDesc(e.target.value)} />

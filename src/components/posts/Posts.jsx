@@ -28,7 +28,7 @@ function Posts({userId,noPost}) {
     },[]);
   return (
     <div className='posts'>
-      {noPost ? <h1>{noPost}</h1> :
+      {posts.length>0 ? <h1>No posts to show.</h1> :
         posts.map(post=>(
           <Post post={post} key={post.id} userId = {userId} />
         ))

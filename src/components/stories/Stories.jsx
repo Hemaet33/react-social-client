@@ -7,7 +7,6 @@ import StoryModal from './StoryModal';
 import axios from 'axios';
 function Stories() {
   const {currentUser} = useContext(AuthContext);
-  const PF = "../../../public/images/";
 
   const [openStroyModal, setOpenStroyModal] = useState(false);
   const [stories, setStories] = useState([]);
@@ -38,7 +37,7 @@ function Stories() {
     <>
       <div className='stories' style={stories.length>3 ? {overflowX: "auto", overflowY:"hidden", whiteSpace:"nowrap"} : {overflowX:"hidden"}}>
       <div className="user_story" >
-        <img src={currentUser.profilePic || PF + "noAvatar.png"} alt="" />
+        <img src={currentUser.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
           <div className="create_story">
           <span onClick={()=>setOpenStroyModal(true)}><AddIcon /></span>
         <h4>Create story</h4>
