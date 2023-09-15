@@ -1,17 +1,17 @@
-import Login from "./pages/login/Login";
+import Login from "./pages/login/Login.jsx";
 import './app.scss';
-import Register from './pages/register/Register';
+import Register from './pages/register/Register.jsx';
 import {createBrowserRouter, RouterProvider, Route, Outlet, Navigate} from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import Leftbar from './components/leftbar/Leftbar';
-import Rightbar from './components/rightbar/Rightbar';
-import Home from './pages/home/Home';
-import Profile from './pages/profile/Profile';
+import Navbar from './components/navbar/Navbar.jsx';
+import Leftbar from './components/leftbar/Leftbar.jsx';
+import Rightbar from './components/rightbar/Rightbar.jsx';
+import Home from './pages/home/Home.jsx';
+import Profile from './pages/profile/Profile.jsx';
 import './style.scss';
 import { useContext } from 'react';
-import { DarkModeContext } from './contexts/darkModeContext';
-import { AuthContext } from './contexts/authContext';
-import Search from './pages/search/Search';
+import { DarkModeContext } from './contexts/darkModeContext.jsx';
+import { AuthContext } from './contexts/authContext.jsx';
+import Search from './pages/search/Search.jsx';
 
 
 function App() {
