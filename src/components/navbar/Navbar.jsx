@@ -58,7 +58,7 @@ function Navbar() {
           <button type="submit" style={{display:"none"}}></button>
         </form>
           <button className="logout" onClick={handleLogout}>Logout</button>
-          <PersonRemoveOutlinedIcon title='Delete account' className="deleteUser" onClick={deleteUser} />
+          <PersonRemoveOutlinedIcon titleAccess='Delete account' className="deleteUser" onClick={deleteUser} />
       </div>
 
       <div className="right"> 
