@@ -56,7 +56,7 @@ function Post({post}) {
       setCommentsCount(res.data.length)
     }
     counComment();
-  },[post]);
+  },[post,commentsCount]);
 
     const deletePost = async()=>{
       await axios.delete(`https://react-social-api.onrender.com/api/posts/${post.id}`, {

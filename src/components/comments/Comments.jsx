@@ -21,7 +21,8 @@ const Comments = ({postId,setCommentsCount}) => {
     const fetchComments = async()=>{
       try {
         const res = await axios.get("https://react-social-api.onrender.com/api/comments/"+postId);
-        setComments(res.data);
+        await setComments(res.data);
+        setCommentsCount(res.data.length);
       } catch (error) {
         console.log(error);
       }
@@ -38,7 +39,7 @@ const Comments = ({postId,setCommentsCount}) => {
       </div>
       {comments.map((comment) => (
         <div className="comment">
-          <img src={comment.profilePic} alt="" />
+          <img src={comment.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
           <div className="info">
             <span>{comment.name}</span>
             <p>{comment.desc}</p>
