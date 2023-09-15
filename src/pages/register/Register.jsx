@@ -24,6 +24,13 @@ function Register() {
     e.preventDefault();
     try {
       await axios.post("https://react-social-api.onrender.com/api/auth/register" ,inputs);
+
+      setInputs({
+        username:"",
+        email:"",
+        password:"",
+        name:"",
+      })
     } catch (error) {
       setErr(error.response.data);
     }

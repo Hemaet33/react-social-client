@@ -24,6 +24,10 @@ function Login() {
     e.preventDefault();
     try {
       await login(inputs);
+      await setInputs({
+        username:"",
+        password:""
+      });
       navigate("/");
     } catch (error) {
       setErr(error.response.data);
