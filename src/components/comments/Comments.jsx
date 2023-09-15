@@ -7,6 +7,7 @@ const Comments = ({postId,setCommentsCount}) => {
   const { currentUser } = useContext(AuthContext);
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  const [commentDeleted, setCommentDeleted] = useState(false);
 
   const addComment = async(e)=>{
     e.preventDefault();
@@ -15,6 +16,14 @@ const Comments = ({postId,setCommentsCount}) => {
     });
 
     setComment("");
+  }
+  const deleteComment = async(id)=>{
+    e.preventDefault();
+    await axios.delete("https://react-social-api.onrender.com/api/comments/"+id,{
+      withCredentials: true
+    });
+
+    setCommentDeleted(true);
   }
 
     useEffect(()=>{
@@ -28,7 +37,7 @@ const Comments = ({postId,setCommentsCount}) => {
       }
     }
     fetchComments();
-  },[postId, comment])
+  },[postId, comment,commentDeleted])
 
   return (
     <div className="comments">
@@ -45,7 +54,7 @@ const Comments = ({postId,setCommentsCount}) => {
             <p>{comment.desc}</p>
           </div>
           <span className="date">1 hour ago</span>
-          {currentUser.id == comment.userId && <span className="delete" title="Delete">x</span>}
+          {currentUser.id == comment.userId && <span onClick={()=>deleteComment(comment.id)} className="delete" title="Delete">x</span>}
         </div>
       ))}
     </div>
