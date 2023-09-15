@@ -13,7 +13,7 @@ import { AuthContext } from "../../../contexts/authContext";
 import Posts from "../Posts";
 
 
-function Post({post}) {
+function Post({post,setDeletedPost}) {
   const {currentUser} = useContext(AuthContext)
   const [commentsOpen, setCommentsOpen] = useState(false);
   const [commentsCount, setCommentsCount] = useState(0);
@@ -62,7 +62,7 @@ function Post({post}) {
       await axios.delete(`https://react-social-api.onrender.com/api/posts/${post.id}`, {
         withCredentials:true
       });
-      window.location.reload();
+      setDeletedPost(true);
     }
 
 

@@ -7,6 +7,7 @@ import axios from 'axios';
 function Posts({userId,noPost}) {
     const [posts, setPosts] = useState([]);
     const [noPostMsg, setNoPostMsg]=useState("");
+    const [deletedPost, setDeletedPost]=useState(false);
     useEffect(()=>{
       const userPosts = async()=>{
         try {
@@ -28,12 +29,12 @@ function Posts({userId,noPost}) {
         }
       }
       userPosts();
-    },[]);
+    },[deletedPost]);
   return (
     <div className='posts'>
       {noPostMsg !== "" ? <h1>{noPostMsg}</h1> :
         posts.map(post=>(
-          <Post post={post} key={post.id} userId = {userId} />
+          <Post post={post} key={post.id} userId = {userId} setDeletedPost={setDeletedPost} />
         ))
       }
     </div>
