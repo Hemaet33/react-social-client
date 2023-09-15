@@ -67,7 +67,7 @@ function App() {
       path: "/register",
       element: <Register />
     }
-  ]);
+  ],{basename:"/react-social-client"});
 
   return(
     <RouterProvider router={router}/>
