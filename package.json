@@ -1,5 +1,6 @@
 {
   "proxy": "https://react-social-api.onrender.com",
+  "homepage": "https://hemaet33.github.io/react-social-client/",
   "name": "fb-client",
   "private": true,
   "version": "0.0.0",
