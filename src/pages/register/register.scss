@@ -4,6 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(max-width:480px){
+   display: block;
+  }
+
+  @media(max-width: 960px){
+   display: block;
+  }
   .card{
     width: 50%;
     display: flex;
@@ -15,12 +23,10 @@
 
     
     @media(max-width:480px){
-      flex-direction: column;
       width: 100%;
     }
   
     @media(max-width: 960px){
-      flex-direction: column;
       width: 100%;
     }
 
@@ -34,12 +40,6 @@
       gap:30px;
       color: #fff;
 
-      @include mobile{
-        display: none;
-      }
-      @include tablet{
-        display: none;
-      }
       h1{
         font-size: 100px;
         line-height: 100px;
