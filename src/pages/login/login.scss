@@ -13,6 +13,14 @@
     background-color: #fff;
     min-height: 500px;
     overflow: hidden;
+    
+    @media(max-width:480px){
+      flex-direction: column;
+    }
+  
+    @media(max-width: 960px){
+      flex-direction: column;
+    }
     .left{
       flex:1;
       background: linear-gradient(rgba(39,11,96, 0.5), rgba(39,11,96, 0.5)), url("https://images.unsplash.com/photo-1607748851687-ba9a10438621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80") center;
@@ -23,13 +31,6 @@
       gap:30px;
       color: #fff;
 
-      @media(max-width:480px){
-        display: none;
-      }
-    
-      @media(max-width: 960px){
-        display: none;
-      }
       h1{
         font-size: 100px;
         line-height: 100px;
