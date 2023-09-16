@@ -14,10 +14,12 @@
     
     @media(max-width:480px){
       flex-direction: column;
+      width: 100%;
     }
   
     @media(max-width: 960px){
       flex-direction: column;
+      width: 100%;
     }
     .left{
       flex:1;
