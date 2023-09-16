@@ -9,10 +9,11 @@
     background-color: themed("bg");
     color: themed("textColor");
   display: flex;
+  align-items: center;
   height: 250px;
   margin-bottom: 30px;
   gap: 10px;
-  padding: 12px 20px 0;
+  padding: 0 20px;
 
   &::-webkit-scrollbar {
     width: 20px;
@@ -30,7 +31,7 @@
 
   .user_story{
     min-width: 130px;
-    height: 100%;
+    height: 210px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -92,7 +93,7 @@
 
   .story{
     min-width: 130px;
-    height: 100%;
+    height: 210px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
