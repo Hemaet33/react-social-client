@@ -1,7 +1,6 @@
 @import "../../style.scss";
 
 .login{
-  @include themify($themes) {
   height: 100vh;
   background-color: rgb(193, 190, 255);
   display: flex;
@@ -23,12 +22,7 @@
       flex-direction: column;
       gap:30px;
       color: #fff;
-      @include mobile{
-        display: none;
-      }
-      @include tablet{
-        display: none;
-      }
+    
       h1{
         font-size: 100px;
         line-height: 100px;
@@ -84,4 +78,3 @@
     }
   }
   }
-}
