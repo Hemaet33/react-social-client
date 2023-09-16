@@ -36,7 +36,9 @@ function Navbar() {
   }
   
   const deleteUser = async()=>{
-    await axios.delete(`https://react-social-api.onrender.com/api/users/${currentUser.id}`);
+    await axios.delete(`https://react-social-api.onrender.com/api/users/${currentUser.id}`,{
+      withCredentials: true
+    });
     await axios.post("https://react-social-api.onrender.com/api/auth/logout");
     await localStorage.removeItem("user");
     navigate("/login");
