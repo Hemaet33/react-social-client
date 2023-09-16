@@ -1,3 +1,5 @@
+@import "../../style.scss";
+
 .register{
   @include themify($themes) {
   height: 100vh;
