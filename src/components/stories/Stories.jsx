@@ -35,7 +35,7 @@ function Stories() {
 
   return (
     <>
-      <div className='stories' style={stories.length>3 ? {overflowX: "scroll", overflowY:"hidden", whiteSpace:"nowrap"} : {overflowX:"hidden"}}>
+      <div className='stories' style={stories.length>3 ? {overflowX: "auto", overflowY:"hidden", whiteSpace:"nowrap"} : {overflowX:"hidden"}}>
       <div className="user_story" >
         <img src={currentUser.profilePic || "https://res.cloudinary.com/diiszoitk/image/upload/v1694809675/noAvatar_l1qqsa.png"} alt="" />
           <div className="create_story">
